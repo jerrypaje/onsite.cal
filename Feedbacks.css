@@ -1,0 +1,253 @@
+
+
+@font-face {
+  font-family: 'bookmania-light';
+  src: url('/Fonts/Demo_Fonts/Fontspring-DEMO-bookmania-light.otf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: red .1px solid;*/
+    }
+
+    body{
+      background-color: white;
+    }
+
+    .header{
+    position: fixed;
+    width: 100%;
+    padding: none;
+    margin: none;
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    background: beige;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.10);
+    }
+    
+    .header:hover .logo,
+    .header:hover .navbar a,
+    .header:hover .dropdown .dropbtn,
+    .header:hover .dropdown-content a,
+    .header:hover .icons li {
+      color: black;
+      
+    }
+
+    .header .navbar li:hover,
+    .header .dropdown:hover{
+      background-color: #5E6F86; 
+    }
+  
+    .header .navbar li:hover a,
+    .header .dropdown:hover .dropbtn,
+    .header a:hover {
+        color: rgb(255, 255, 255);  
+    }
+
+
+
+    .logo {
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 30px;
+    font-family: 'bookmania-light';
+    letter-spacing: 8px;
+    }
+    
+
+    .navbar {
+    margin-right: 500px;
+    }
+
+    .navbar .bar{
+      padding: none;
+      margin: none;
+    }
+
+
+    .navbar .bar li {
+    list-style: none;
+    display: inline-flex;  
+    margin: none;
+    transition: background-color 0.2s ease;
+    }
+
+    .navbar .bar li a{
+    font-size: 12px;
+    text-decoration: none;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    cursor: pointer
+    }
+
+
+    .dropdown {
+        display: inline-block;
+        padding-top: 48px;
+        padding-bottom: 29px;
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+      
+      .dropdown .dropbtn {
+        font-size: 12px;  
+        border: none;
+        outline: none;
+        color: rgb(0, 0, 0);
+        background-color: inherit;
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 2px;
+      }
+      
+      
+      .dropdown-content {
+        margin-top: 28px;
+        margin-left: 10px;
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border-top: 5px solid #5E6F86;
+      }
+      
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 10px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 2px;
+        font-size: 12px;
+        transition: background-color 0.1s ease;
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+        background-color: rgb(243, 234, 234);
+      
+      }
+
+      .dropdown:hover .dropdown-content a:hover{
+        background-color: #5E6F86;
+        color: white;
+        font-weight: lighter;
+      }
+    
+  
+  .header .icons li {
+      list-style: none;
+      display: inline-block;
+      padding: 10px;
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 20px;
+    }
+
+    .header:hover .icons li:hover {
+      color: #5E6F86;
+      transition: background-color 0.3s ease;
+    }
+
+    .popup-shoppingcart {
+      position: fixed;
+      top: 0;
+      right: -100%; 
+      width: 450px;
+      height: 100%; 
+      background-color: #5E6F86;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 9999;
+      overflow-y: auto; 
+      transition: right 0.3s ease; 
+      padding: 20px;
+    }
+    
+    .popup-shoppingcart.active {
+      right: 0;
+    }
+    
+    .popup-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Montserrat-ExtraBold';
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+  
+    }
+    
+    .popup-header h2 {
+      margin: 0;
+      color: beige;
+    }
+    
+    .popup-close {
+      font-size: 24px;
+      color: beige;
+      cursor: pointer;
+    }
+    
+            .shopcart-products {
+              width: 100%;
+              border-collapse: collapse;
+              margin-top: 20px;
+            }
+            
+            .shopcart-products td {
+              padding: 10px;
+              border: 1px solid #ddd;
+            }
+            
+            .shopcart-products img {
+              width: 50px;
+            }
+            
+            .shopcart-products p {
+              margin: 0;
+              font-family: 'Montserrat-bold';
+              font-size: 10px;
+              color: beige;
+            }
+            
+            .shopcart-products button {
+              font-family: 'Montserrat-ExtraBold';
+              font-size: 14px;
+              border: solid 1px;
+              cursor: pointer;
+              width: 100px;
+              color: #5E6F86;
+              border: solid 1px beige;
+            }
+            .shopcart-products button:active {
+              color: beige;
+              background-color: #5E6F86;
+            }
+
+  .content {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-top: 150px;
+    color: black;
+    padding-bottom: 30px;
+    }
+  
+

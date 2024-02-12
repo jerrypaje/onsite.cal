@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onsite.cal</title>
+    <link rel="stylesheet" href="/CSS/Payment-CARHARTT-LIGHT-GRAY-CARPENTER-PANTS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" >
+    <link href="https://db.onlinewebfonts.com/c/c5dbc56f321f765543511ecf3739935b?family=Bookmania" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.dafontfree.io/bookmania-font/">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="/Logos/onsite.cal.png">
+<style>
+
+</style>
+
+</head>
+<body>
+
+    <div class="header">
+        <a href="/HTML/onsite-cal.html" class="logo">onsite.cal</a>
+    
+        <nav class="navbar">
+            <ul class="bar">
+                <li><a href="/HTML/onsite-cal.html">HOME</a></li>
+
+                <div class="dropdown">
+                    <button class="dropbtn">CATEGORIES</button>
+                    <div class="dropdown-content">
+                        <a href="/HTML/Categories-New-Arrival.html">New Arrival</a>
+                        <a href="/HTML/Categories-Best-Seller.html">Best Seller</a>
+                        <a href="/HTML/Categories-Hoodies.html">Hoodies</a>
+                        <a href="/HTML/Categories-Shorts.html">Shorts</a>
+                        <a href="/HTML/Categories-Pants.html">Pants</a>
+                        <a href="/HTML/Categories-Tops.html">Tops</a>                                                                     
+                    </div>
+                </div>
+
+                
+                <li><a href="/HTML/Feedbacks bootstrap.html">FEEDBACKS</a></li>
+                <li><a href="/HTML/FAQS.html">FAQS</a></li>
+            </ul>
+        </nav>
+
+        <ul class="icons">
+            <li><a href="/HTML/login.html" class="icon-link"><span class="icon ri-user-line"></span></a></li>
+            <li><i class="ri-search-2-line"></i></li>
+            <li><i class="ri-shopping-bag-line" onclick="openPopupBag()"></i></li>
+            
+        </ul>
+    </div>
+    
+    <div class="popup-shoppingcart" id="popup-shoppingcart">
+        <div class="popup-header">
+            <h2>Shopping Bag</h2>
+            <span class="popup-close" onclick="closePopupBag()">&times;</span>
+        </div>
+        <hr>
+        <table class="shopcart-products">
+            <tr>
+                <td>
+                    <img src="/products/pants2.jpg">
+                </td>
+                <td>
+                    <p>CARHARTT BLK RIPSTOP <br> CARGO PANTS</p>
+                </td>
+                <td>
+                    <p id="prdct1-price">PHP 1,600</p>
+                </td>
+                <td>
+                    <a href="/HTML/Payment-CARHARTT-BLK-RIPSTOP.html"><button>Buy now</button></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="/products/hoodie3.jpeg">
+                </td>
+                <td>
+                    <p>VINTAGE BLUE RUSSEL <br> BOXY HOODIE</p>
+                </td>
+                <td>
+                    <p id="prdct2-price">PHP 1,000</p>
+                </td>
+                <td>
+                    <a href="/HTML/Payment-VINTAGE-BLUE-RUSSEL-BOXY-HOODIE.html"><button>Buy now</button></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="/products/tops2.jpg">
+                </td>
+                <td>
+                    <p>H&M BLACK <br> LINEN POLO</p>
+                </td>
+                <td>
+                    <p id="prdct3-price">PHP 800</p>
+                </td>
+                <td>
+                    <a href="/HTML/Payment-H&M-BLACK-LINEN-POLO.html"><button>Buy now</button></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="/products/short3.jpg">
+                </td>
+                <td>
+                    <p>DICKIES <br> LIGHT WASH JORTS</p>
+                </td>
+                <td>
+                    <p id="prdct3-price">PHP 1,000</p>
+                </td>
+                <td>
+                    <a href="/HTML/Payment-DICKIES-LIGHT-WASHED-JORTS.html"><button>Buy now</button></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="/products/tops3.jpg">
+                </td>
+                <td>
+                    <p>DARK GRAY RUSSEL ATHLETIC <br> BOXY CREWNECK</p>
+                </td>
+                <td>
+                    <p id="prdct3-price">PHP 800</p>
+                </td>
+                <td>
+                    <a href="/HTML/Payment-DARK-GRAY-RUSSEL-ATHLETIC-BOXY-CREWNECK.html"><button>Buy now</button></a>
+                </td>
+            </tr>
+        </table>
+          
+    </div>
+
+    <script>
+        function openPopupBag() {
+            var popup = document.getElementById('popup-shoppingcart');
+            popup.classList.add('active');
+        }
+
+        function closePopupBag() {
+            var popup = document.getElementById('popup-shoppingcart');
+            popup.classList.remove('active');   
+        }
+    </script>
+
+    <section class="content">
+        <div class="customer-details">
+          Contact <br /><br /> <input type="text" name="email" placeholder="Email" /><br /><br />
+      
+          Delivery <br /><br /> <input type="text" name="phonenumber" placeholder="Standard Shipping (J & T)" /><br /><br /><br />
+      
+          <input type="text" name="email" placeholder="Address" /><br /><br />
+      
+          <input type="fname" name="fname" placeholder="First Name" />
+          <input type="lname" name="lname" placeholder="Last Name" /><br /><br />
+      
+          <input type="text" name="pnumber" placeholder="Phone Number +63" /><br /><br/>
+        </div>
+      
+        <div class="vl"></div>
+
+        <div class="product-details">
+            <div class="product-info">
+              <img src="/products/pants1.jpg" style="width: 100px; height: 120px;">
+              <h1>CARHARTT LIGHT GRAY <br/>CARPENTER PANTS<br/>L</h1>
+              <h2>PHP 1,100</h2>
+            </div>
+          
+            <div class="additional-details">
+              <h3>Shipping</h3>
+              <h4>Price may vary </h4>
+              <br /><br />
+              <h5>Total</h5>
+              <h6>PHP 1,100</h6>
+            </div>
+            
+            <h7>Payment</h7>
+
+
+            <div class="payment-method">
+                <img id="visa" src="/Logos/Visa.png" alt="Image 1">
+                <img id="mastercard" src="/Logos/mastercard.png" alt="Image 2">
+                <img id="gcash" src="/Logos/gcash.png" alt="Image 3">
+                <img id="maya" src="/Logos/maya.png" alt="Image 4">
+                <img id="grab" src="/Logos/grab.png" alt="Image 5">
+                <img id="ub" src="/Logos/UB.png" alt="Image 6">
+                <img id="bpi" src="/Logos/bpi.png" alt="Image 7">
+                <img id="billease" src="/Logos/billease.png" alt="Image 8"><br/><br/>
+                <img id="wallet" src="/Logos/wallet.png" alt="Image 9">
+    
+            </div>
+
+            <button type="submit" onclick="openPopup()">PAY NOW</button>
+
+            <div class="pop-Up" id="popup">
+                <img src="/Logos/Untitled_design__2_-removebg-preview.png">
+                <h1>Thank you!</h1>
+                <p>Your purchase was successful!</p>
+                <button onclick="closePopup()">Ok</button>
+            </div>
+            
+            <script>
+                let popup = document.getElementById("popup");
+            
+                function openPopup() {
+                    popup.classList.add('show');
+                }
+            
+                function closePopup() {
+                    popup.classList.remove('show');
+                }
+            </script>
+          </div>
+        
+
+
+
+      </section>
+    
+
+      <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section-1">
+                <p>Sign Up to receive early exclusive access to products and discounts</p>
+
+                <form class="signup-form">
+                    <input type="email" id="email" name="email" required placeholder="Email">
+        
+                    <button type="submit">Subscribe</button>
+                </form>
+
+            </div>
+
+            <div class="footer-section-2">
+                <a href="#" class="logo-footer">onsite.cal</a>
+                <p>Experience the complete fashion circle with onsite.cal! <br />
+                     Sell your pre-loved pieces at a guaranteed price,and then<br />
+                      explore our curated collection to shop these unique finds.<br />
+                       With onsite.cal, your wardrobe is not just a revolving door<br />
+                        it's a dynamic marketplace where every item has a story,<br />
+                         waiting to be told and worn again<br />
+                </p>
+            </div>
+
+            <div class="footer-section-3">
+                <i class="ri-instagram-fill"></i>
+                <i class="ri-facebook-fill"></i>
+                <p id="customer">Customer Care</p>
+                <p id="shipping">Shipping Policy</p>
+                <p id="pickup">Pickup Policy</p>
+                <p id="help">Help Center</p>
+                <p id="terms">Terms of Service</p>
+            </div>
+            
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 onsite.cal. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

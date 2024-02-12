@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onsite.cal</title>
+    <link rel="stylesheet" href="/CSS/onsite-cal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" >
+    <link href="https://db.onlinewebfonts.com/c/c5dbc56f321f765543511ecf3739935b?family=Bookmania" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="/Logos/onsite.cal.png">
+
+</head>
+<body>
+    <header class="header" id="header">
+        <a href="#" class="logo">onsite.cal</a>
+        <script>
+            window.addEventListener('scroll', function() {
+            console.log("Scroll event triggered!");
+            var header = document.getElementById('header');
+            if (window.scrollY > 0) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            });
+        </script>
+    
+        <nav class="navbar">
+            <ul class="bar">
+                <li><a href="#">HOME</a></li>
+
+                <div class="dropdown">
+                    <button class="dropbtn">CATEGORIES</button>
+                    <div class="dropdown-content">
+                        <a href="Categories-New-Arrival.html">NEW ARRIVAL</a>
+                        <a href="Categories-Best-Seller.html">BEST SELLER</a>
+                        <a href="Categories-Hoodies.html">HOODIES</a>
+                        <a href="Categories-Shorts.html">SHORTS</a>
+                        <a href="Categories-Pants.html">PANTS</a>
+                        <a href="Categories-Tops.html">TOPS</a>                                                                     
+                    </div>
+                </div>
+
+                
+                <li><a href="/HTML/Feedbacks bootstrap.html">FEEDBACKS</a></li>
+                <li><a href="FAQS.html">FAQS</a></li>
+            </ul>
+        </nav>
+
+        <ul class="icons">
+            <li><a href="/HTML/login.html" class="icon-link"><span class="icon ri-user-line"></span></a></li>
+            <li><i class="ri-search-2-line"></i></li>
+            <li><i class="ri-shopping-bag-line" onclick="openPopup()"></i></li>
+            
+        </ul>
+
+
+    </header>
+
+    <div class="popup-shoppingcart" id="popup-shoppingcart">
+        <div class="popup-header">
+            <h2>Shopping Bag</h2>
+            <span class="popup-close" onclick="closePopup()">&times;</span>
+        </div>
+        <hr>
+        <table class="shopcart-products">
+            <tr>
+                <td>
+                    <img src="/products/pants2.jpg">
+                </td>
+                <td>
+                    <p>CARHARTT BLK RIPSTOP <br> CARGO PANTS</p>
+                </td>
+                <td>
+                    <p id="prdct1-price">PHP 1,600</p>
+                </td>
+                <td>
+                    <a href="/HTML/Payment-CARHARTT-BLK-RIPSTOP.html"><button>Buy now</button></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="/products/hoodie3.jpeg">
+                </td>
+                <td>
+                    <p>VINTAGE BLUE RUSSEL <br> BOXY HOODIE</p>
+                </td>
+                <td>
+                    <p id="prdct2-price">PHP 1,000</p>
+                </td>
+                <td>
+                    <a href="/HTML/Payment-VINTAGE-BLUE-RUSSEL-BOXY-HOODIE.html"><button>Buy now</button></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="/products/tops2.jpg">
+                </td>
+                <td>
+                    <p>H&M BLACK <br> LINEN POLO</p>
+                </td>
+                <td>
+                    <p id="prdct3-price">PHP 800</p>
+                </td>
+                <td>
+                    <a href="/HTML/Payment-H&M-BLACK-LINEN-POLO.html"><button>Buy now</button></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="/products/short3.jpg">
+                </td>
+                <td>
+                    <p>DICKIES <br> LIGHT WASH JORTS</p>
+                </td>
+                <td>
+                    <p id="prdct3-price">PHP 1,000</p>
+                </td>
+                <td>
+                    <a href="/HTML/Payment-DICKIES-LIGHT-WASHED-JORTS.html"><button>Buy now</button></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="/products/tops3.jpg">
+                </td>
+                <td>
+                    <p>DARK GRAY RUSSEL ATHLETIC <br> BOXY CREWNECK</p>
+                </td>
+                <td>
+                    <p id="prdct3-price">PHP 800</p>
+                </td>
+                <td>
+                    <a href="/HTML/Payment-DARK-GRAY-RUSSEL-ATHLETIC-BOXY-CREWNECK.html"><button>Buy now</button></a>
+                </td>
+            </tr>
+        </table>
+          
+    </div>
+
+    <script>
+        function openPopup() {
+            var popup = document.getElementById('popup-shoppingcart');
+            popup.classList.add('active');
+        }
+
+        function closePopup() {
+            var popup = document.getElementById('popup-shoppingcart');
+            popup.classList.remove('active');   
+        }
+    </script>
+
+    <div class="content-1">
+        <video  autoplay loop muted src="/Vids/vid1.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+        <p>
+            Welcome to <strong>onsite.cal</strong> , where sustainable fashion meets timeless elegance.
+            Our platform is dedicated to buying and selling high-quality, gently-used clothing that embodies both style and sustainability.
+        </p>
+    </div>
+
+
+    <div  class="products">
+        <h1><span class="bgfont">ALL PRODUCTS</span></h1>
+
+        <div>
+            <a href="/HTML/CARHARTT-BLK-RIPSTOP.html">
+            <img src="/products/pants2.jpg">
+            <p>CARHARTT BLK RIPSTOP</p>
+            <p>CARGO PANTS</p>
+            <p id="price">PHP 1,600</p>
+            </a>
+        </div>
+
+        <div>
+            <a href="/HTML/VINTAGE-BLUE-RUSSEL-BOXY-HOODIE.html">
+            <img src="/products/hoodie3.jpeg">
+            <p>VINTAGE BLUE RUSSEL</p>
+            <p>BOXY HOODIE</p>
+            <p id="price">PHP 1,000</p>
+            </a>
+        </div>
+        
+        <div>
+            <a href="/HTML/CARHARTT-DENIM-DOUBLE-KNEE-PANTS.html">
+            <img src="/products/pants3.jpg">
+            <p>CARHARTT DENIM</p>
+            <p>DOUBLE KNEE PANTS</p>
+            <p id="price">PHP 1,700</p>
+            </a>
+        </div>
+
+        <div>
+            <a href="/HTML/CARHARTT-LIGHT-GRAY-CARPENTER-PANTS.html">
+            <img src="/products/pants1.jpg">
+            <p>CARHARTT LIGHT GRAY</p>
+            <p> CARPENTER PANTS</p>
+            <p id="price">PHP 1,100</p>
+            </a>
+        </div>
+        
+        <div>
+            <a href="/HTML/VINTAGE-RED-RUSSEL-BOXY-HOODIE.html">
+            <img src="/products/hoodie2.jpeg">
+            <p>VINTAGE RED RUSSEL</p>
+            <p>BOXY HOODIE</p>
+            <p id="price">PHP 1,000</p>
+            </a>
+        </div>
+        
+        <div>
+            <a href="/HTML/H&M-BLACK-LINEN-POLO.html">
+            <img src="/products/tops2.jpg">
+            <p>H&M BLACK</p>
+            <p>LINEN POLO</p>
+            <p id="price">PHP 800</p>
+            </a>
+        </div>
+            
+        <div>
+            <a href="/HTML/TOMMY-HILFIGER-WASHED-JORTS.html">
+            <img src="/products/short2.jpg">
+            <p>TOMMY HILFIGER</p>
+            <p>WASHED JORTS</p>
+            <p id="price">PHP 1,000</p>
+            </a>
+        </div>
+
+        <div>
+            <a href="/HTML/CARHARTT-DENIM-JORTS.html">
+            <img src="/products/short1.jpg">
+            <p>CARHARTT DENIM</p>
+            <p>JORTS</p>
+            <p id="price">PHP 1,000</p>
+            </a>
+        </div>
+        
+        <div>
+            <a href="/HTML/DICKIES-LIGHT-WASHED-JORTS.html">
+            <img src="/products/short3.jpg">
+            <p>DICKIES</p>
+            <p>LIGHT WASH JORTS</p>
+            <p id="price">PHP 1,000</p>
+            </a>
+        </div>
+
+        <div>
+            <a href="/HTML/RL-LIGHT-BLUE-POLO.html">
+            <img src="/products/tops1.jpg">
+            <p>RL LIGHT</p>
+            <p>BLUE POLO</p>
+            <p id="price">PHP 800</p>
+            </a>
+        </div>
+
+        <div>
+            <a href="/HTML/DARK-GRAY-RUSSEL-ATHLETIC-BOXY-CREWNECK.html">
+            <img src="/products/tops3.jpg">
+            <p>DARK GRAY RUSSEL ATHLETIC</p>
+            <p>BOXY CREWNECK</p>
+            <p id="price">PHP 800</p>
+            </a>
+        </div>
+        
+        <div>
+            <a href="/HTML/VINTAGE-RED-RUSSEL-BOXY-HOODIE.html">
+            <img src="/products/hoodie1.jpeg">
+            <p>VINTAGE RED RUSSEL</p>
+            <p>BOXY HOODIE</p>
+            <p id="price">PHP 1,200</p>
+            </a>
+        </div>
+        
+        <div>
+            <a href="/HTML/CARHARTT-BLK-RIPSTOP.html">
+            <img src="/products/pants2.jpg">
+            <p>CARHARTT BLK RIPSTOP</p>
+            <p>CARGO PANTS</p>
+            <p id="price">PHP 1,600</p>
+            </a>
+        </div>
+
+        <div>
+            <a href="/HTML/NAVY-BLUE-RUSSEL-BOXY-HOODIE.html">
+            <img src="/products/hoodie2.jpeg">
+            <p>NAVY BLUE RUSSEL</p>
+            <p>BOXY HOODIE</p>
+            <p id="price">PHP 1,000</p>
+            </a>
+        </div>
+        
+        <div>
+            <a href="/HTML/VINTAGE-BLUE-RUSSEL-BOXY-HOODIE.html">
+            <img src="/products/hoodie3.jpeg">
+            <p>VINTAGE BLUE RUSSEL</p>
+            <p>BOXY HOODIE</p>
+            <p id="price">PHP 1,000</p>
+            </a>
+        </div>
+
+        <div>
+            <a href="/HTML/DICKIES-LIGHT-WASHED-JORTS.html">
+            <img src="/products/short3.jpg">
+            <p>DICKIES</p>
+            <p>LIGHT WASH JORTS</p>
+            <p id="price">PHP 1,000</p>
+            </a>
+        </div>
+
+        </div>
+    </div>
+
+    
+    <div class="content-2">
+
+        <p>
+            "Experience vintage sophistication with onsite.cal.<br />
+             Curating iconic brands, we bring you unique designs<br /> and premium quality,
+              redefining your style effortlessly."
+        </p>
+
+        <div class="image-container">
+            <img id="carhartt" src="/Logos/carhartt.png" alt="Image 1">
+        </div>
+        
+        <div class="image-container">
+            
+            <img id="rusell" src="/Logos/Rusell1.png" alt="Image 2">
+        </div>
+    
+        <div class="image-container">
+            <img id="dickies" src="/Logos/Dickies.png" alt="Image 3">
+        </div>
+    
+        <div class="image-container">
+            <img id="hm" src="/Logos/hm.png" alt="Image 4">
+        </div>
+    </div>
+    
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section-1">
+                <p>Sign Up to receive early exclusive access to products and discounts</p>
+
+                <form class="signup-form">
+                    <input type="email" id="email" name="email" required placeholder="Email">
+        
+                    <button type="submit">Subscribe</button>
+                </form>
+
+            </div>
+
+            <div class="footer-section-2">
+                <a href="#" class="logo-footer">onsite.cal</a>
+                <p>Experience the complete fashion circle with onsite.cal! <br />
+                     Sell your pre-loved pieces at a guaranteed price,and then<br />
+                      explore our curated collection to shop these unique finds.<br />
+                       With onsite.cal, your wardrobe is not just a revolving door<br />
+                        it's a dynamic marketplace where every item has a story,<br />
+                         waiting to be told and worn again<br />
+                </p>
+            </div>
+
+            <div class="footer-section-3">
+                <i class="ri-instagram-fill"></i>
+                <i class="ri-facebook-fill"></i>
+                <p id="customer">Customer Care</p>
+                <p id="shipping">Shipping Policy</p>
+                <p id="pickup">Pickup Policy</p>
+                <p id="help">Help Center</p>
+                <p id="terms">Terms of Service</p>
+            </div>
+            
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 onsite.cal. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>

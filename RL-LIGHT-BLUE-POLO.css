@@ -1,0 +1,520 @@
+@font-face {
+  font-family: 'bookmania-light';
+  src: url('/Fonts/Demo_Fonts/Fontspring-DEMO-bookmania-light.otf');
+}
+
+@font-face {
+  font-family: 'bookmania-Semibold';
+  src: url('/Fonts/Demo_Fonts/Fontspring-DEMO-bookmania-semibold.otf');
+}
+
+@font-face {
+  font-family: 'Montserrat-ExtraBold';
+  src: url('/Fonts/static/Montserrat-ExtraBold.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('/Fonts/static/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('/Fonts/static/Montserrat-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url('/Fonts/static/Montserrat-Light.ttf');
+}
+    
+  
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /*border: red .1px solid;*/
+        }
+    
+        body{
+          background-color: white;
+        }
+    
+        .header{
+        position: fixed;
+        width: 100%;
+        padding: none;
+        margin: none;
+        padding-left: 40px;
+        display: flex;
+        align-items: center;
+        z-index: 100;
+        background: beige;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.10);
+        }
+        
+        .header:hover .logo,
+        .header:hover .navbar a,
+        .header:hover .dropdown .dropbtn,
+        .header:hover .dropdown-content a,
+        .header:hover .icons li {
+          color: black;
+          
+        }
+    
+        .header .navbar li:hover,
+        .header .dropdown:hover{
+          background-color: #5E6F86; 
+        }
+      
+        .header .navbar li:hover a,
+        .header .dropdown:hover .dropbtn,
+        .header a:hover {
+            color: rgb(255, 255, 255);  
+        }
+    
+    
+    
+        .logo {
+        font-size: 40px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-weight: 500;
+        margin-right: 30px;
+        font-family: 'bookmania-light';
+        letter-spacing: 8px;
+        }
+        
+    
+        .navbar {
+        margin-right: 500px;
+        }
+    
+        .navbar .bar{
+          padding: none;
+          margin: none;
+        }
+    
+    
+        .navbar .bar li {
+        list-style: none;
+        display: inline-flex;  
+        margin: none;
+        transition: background-color 0.2s ease;
+        }
+    
+        .navbar .bar li a{
+        font-size: 12px;
+        text-decoration: none;
+        display: block;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+        color: rgb(0, 0, 0);
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 2px;
+        cursor: pointer
+        }
+    
+    
+        .dropdown {
+            display: inline-block;
+            padding-top: 48px;
+            padding-bottom: 29px;
+            padding-right: 10px;
+            padding-left: 10px;
+          }
+          
+          .dropdown .dropbtn {
+            font-size: 12px;  
+            border: none;
+            outline: none;
+            color: rgb(0, 0, 0);
+            background-color: inherit;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 2px;
+          }
+          
+          
+          .dropdown-content {
+            margin-top: 28px;
+            margin-left: 10px;
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-top: 5px solid #5E6F86;
+          }
+          
+          .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 10px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 2px;
+            font-size: 12px;
+            transition: background-color 0.1s ease;
+          }
+          
+          .dropdown:hover .dropdown-content {
+            display: block;
+            background-color: rgb(243, 234, 234);
+          
+          }
+    
+          .dropdown:hover .dropdown-content a:hover{
+            background-color: #5E6F86;
+            color: white;
+            font-weight: lighter;
+          }
+        
+      
+          .header .icons li {
+            list-style: none;
+            display: inline-block;
+            margin: 10px;  
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 20px;
+            text-decoration: none;
+            position: relative;
+          }
+      
+          .header:hover .icons li:hover {
+            color: #5E6F86;
+          }
+      
+          .header .icons .ri-user-line {
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 2px;
+            
+        }
+      
+        .header:hover .icons .ri-user-line {
+          color: black;
+      }
+        
+        .header .icons .icon {
+            display: inline-block;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 20px;
+            text-decoration: none;
+            margin: none;
+            padding: none;
+        }
+        
+        .header .icons .icon-link:hover .icon {
+            color: #5E6F86;
+        }
+
+
+        .popup-shoppingcart {
+          position: fixed;
+          top: 0;
+          right: -100%; 
+          width: 450px;
+          height: 100%; 
+          background-color: #5E6F86;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          z-index: 9999;
+          overflow-y: auto; 
+          transition: right 0.3s ease; 
+          padding: 20px;
+        }
+        
+        .popup-shoppingcart.active {
+          right: 0;
+        }
+        
+        .popup-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-family: 'Montserrat-ExtraBold';
+          letter-spacing: 3px;
+          margin-bottom: 10px;
+      
+        }
+        
+        .popup-header h2 {
+          margin: 0;
+          color: beige;
+        }
+        
+        .popup-close {
+          font-size: 24px;
+          color: beige;
+          cursor: pointer;
+        }
+        
+                .shopcart-products {
+                  width: 100%;
+                  border-collapse: collapse;
+                  margin-top: 20px;
+                }
+                
+                .shopcart-products td {
+                  padding: 10px;
+                  border: 1px solid #ddd;
+                }
+                
+                .shopcart-products img {
+                  width: 50px;
+                }
+                
+                .shopcart-products p {
+                  margin: 0;
+                  font-family: 'Montserrat-bold';
+                  font-size: 10px;
+                  color: beige;
+                }
+                
+                .shopcart-products button {
+                  font-family: 'Montserrat-ExtraBold';
+                  font-size: 14px;
+                  border: solid 1px;
+                  cursor: pointer;
+                  width: 100px;
+                  color: #5E6F86;
+                  border: solid 1px beige;
+                }
+                .shopcart-products button:active {
+                  color: beige;
+                  background-color: #5E6F86;
+                }
+    
+      .content {
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 2px;
+        text-align: center;
+        padding-top: 150px;
+        color: black;
+        padding-bottom: 30px;
+        }
+      
+    
+      .item{
+          display: inline;
+          padding: none;
+          margin: none;
+      }
+      
+      .productdesc{
+          float: right;
+          margin-right: 150px;
+      }
+          .productdesc h1{
+            font-family: 'Montserrat-ExtraBold';
+            margin-right:150px;
+          }
+          .productdesc h2{
+              text-align: left;
+              padding-top: 20px;
+              padding-bottom: 30px;
+              font-size: 16px;
+              font-family: 'Montserrat', sans-serif;
+              letter-spacing: 3px;
+          }
+          .productdesc hr{
+              border-color: black;
+          }
+          .productdesc h3{
+              font-size: 14px;
+              font-weight: bolder;
+              padding-top: 30px;
+              padding-bottom: 10px;
+              font-family: 'Montserrat-ExtraBold';
+              text-align: left;
+          }
+          .productdesc table{
+              width: 100%;
+              height: 70px;
+              border-color: black;
+              border-style: solid;
+          }
+              .productdesc table, th td {
+                  border: 3px solid black;
+                  border-collapse: collapse;
+                  font-family: 'Montserrat-ExtraBold';
+                  font-size: 11px;
+              }
+          .productdesc h4{
+             font-family: 'Montserrat-Regular';
+              padding-top: 40px;
+              padding-bottom: 15px;
+              font-size: 12px;
+              text-align: left;
+              margin-left: 70px;
+              letter-spacing: 0px;
+              
+          }
+          .productdesc button {
+              border: 3px solid;
+              padding: 10px 170px;
+              cursor: pointer;
+              background-color: white;
+              font-family: 'Montserrat-Bold';
+              transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
+          }
+  
+            .productdesc button:hover {
+              background-color: #5E6F86;
+              color: white; 
+              border-color: #5E6F86; 
+          } 
+  
+          .productdesc button:active {
+            transform: scale(0.95); 
+          } 
+  
+  
+  
+          .productdesc h5{
+              padding-top: 20px;
+              text-align: left;
+              font-family: 'Montserrat-ExtraBold';
+              font-size: 12;
+              letter-spacing: 0px;
+          }
+          .productdesc ul{
+              text-align: left;
+              font-size: 12px;
+              padding-top: 10px;
+          }
+              .productdesc ul li{
+                  padding: 2px;
+                  margin-left: 30px;
+                  font-family: 'Montserrat-Bold';
+                  letter-spacing: 0px;
+              }
+  
+
+
+              .footer {
+                position: relative;
+                width: 100%;
+                height: auto;
+                background-color: beige;
+                color: #000000;
+                padding: 20px;
+                text-align: center;
+                border-top: 5px solid #5E6F86;
+            
+              }
+            
+              
+                .footer-content {
+                  display: flex;
+                  align-items: center;
+                  max-width: 1200px;
+                  margin: 0; 
+                }
+            
+                .footer-section-1{
+                  margin: 50px 0px 0px 50px;
+                  font-size: 12px;
+                  font-family: 'Montserrat-Light';
+                }
+            
+                .footer form{
+                  display: flex;
+                  align-items: center;
+                  margin-bottom: 50px;
+                }
+            
+                .footer form input{
+                  padding: 10px;
+                  border: 1px solid #ccc;
+                  border-radius: 5px;
+                  width: 80%;
+                  margin: 11px 5px 11px 0px;
+                  transition: border-color 0.3s ease;
+                }
+                .footer form input:focus{
+                  border: .5px solid #000000;
+                  outline: none;
+                }
+            
+                .footer form button{
+                  border: 0px solid #ccc;
+                  border-radius: 5px;
+                  padding: 11px 10px 11px 10px;
+                  background-color: #5E6F86;
+                  color: white;
+                  font-family: 'Montserrat-Light';
+                  letter-spacing: 2px;
+                  transition: transform 0.3s ease;
+                }
+                .footer form button:active{
+                  transform: scale(0.95); 
+                }
+            
+                .footer-section-2{
+                  margin: 50px 0px 100px 100px;
+                  font-size: 12px;
+                }
+            
+                .footer-section-2 a{
+                  text-decoration: none;
+                  color: #5E6F86;
+                  font-size: 50px;
+                  font-family: 'bookmania-light';
+                  letter-spacing: 4px;
+                }
+                .footer-section-2 p{
+                  text-align: center;
+                  font-size: 12px;
+                  font-family: 'Montserrat-Light';
+                  line-height: 1.5;
+                }
+            
+                .footer-section-3{
+                  margin: 0px 0px 0px 100px;
+                  font-size: 12px;
+                }
+            
+                .footer-section-3  i{
+                  font-size: 20px;
+                  color: grey;
+                  cursor: pointer;
+                  letter-spacing: 10px;
+                  transition: color 0.2s ease, font-weight 0.2s ease;
+                }
+            
+                .footer-section-3 i:hover{
+                  font-weight: bold;
+                  color: rgb(0, 0, 0);
+                }
+                .footer-section-3 p{
+                  font-size: 12px;
+                  font-family: 'Montserrat-Light';
+                  color: grey;
+                  line-height: 3;
+                  cursor: pointer;
+                  letter-spacing: 1px;
+                  transition: color 0.2s ease, font-weight 0.2s ease;
+                }
+            
+                .footer-section-3 p:hover{
+                  font-weight: bold;
+                  color: rgb(0, 0, 0);
+                }
+              
+            
+                .footer-bottom {
+                  margin: none;
+                  text-align: center;
+                  font-size: 10px;
+                  margin-left: 50px;
+                  margin-bottom: 30px;
+                  font-family: 'Montserrat-Light';
+                }

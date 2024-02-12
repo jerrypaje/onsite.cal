@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onsite.cal</title>
+    <link rel="stylesheet" href="/CSS/DICKIES-LIGHT-WASHED-JORTS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" >
+    <link href="https://db.onlinewebfonts.com/c/c5dbc56f321f765543511ecf3739935b?family=Bookmania" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.dafontfree.io/bookmania-font/">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="/Logos/onsite.cal.png">
+<style>
+
+</style>
+
+</head>
+<body>
+
+    <div class="header">
+        <a href="/HTML/onsite-cal.html" class="logo">onsite.cal</a>
+    
+        <nav class="navbar">
+            <ul class="bar">
+                <li><a href="/HTML/onsite-cal.html">HOME</a></li>
+
+                <div class="dropdown">
+                    <button class="dropbtn">CATEGORIES</button>
+                    <div class="dropdown-content">
+                        <a href="/HTML/Categories-New-Arrival.html">New Arrival</a>
+                        <a href="/HTML/Categories-Best-Seller.html">Best Seller</a>
+                        <a href="/HTML/Categories-Hoodies.html">Hoodies</a>
+                        <a href="/HTML/Categories-Shorts.html">Shorts</a>
+                        <a href="/HTML/Categories-Pants.html">Pants</a>
+                        <a href="/HTML/Categories-Tops.html">Tops</a>                                                                     
+                    </div>
+                </div>
+
+                
+                <li><a href="/HTML/Feedbacks bootstrap.html">FEEDBACKS</a></li>
+                <li><a href="/HTML/FAQS.html">FAQS</a></li>
+            </ul>
+        </nav>
+
+        <ul class="icons">
+            <li><a href="/HTML/login.html" class="icon-link"><span class="icon ri-user-line"></span></a></li>
+            <li><i class="ri-search-2-line"></i></li>
+            <li><i class="ri-shopping-bag-line" onclick="openPopup()"></i></li>
+            
+        </ul>
+    </div>
+    
+    <div class="popup-shoppingcart" id="popup-shoppingcart">
+        <div class="popup-header">
+            <h2>Shopping Bag</h2>
+            <span class="popup-close" onclick="closePopup()">&times;</span>
+        </div>
+        <hr>
+        <table class="shopcart-products">
+            <tr>
+                <td>
+                    <img src="/products/pants2.jpg">
+                </td>
+                <td>
+                    <p>CARHARTT BLK RIPSTOP <br> CARGO PANTS</p>
+                </td>
+                <td>
+                    <p id="prdct1-price">PHP 1,600</p>
+                </td>
+                <td>
+                    <a href="/HTML/Payment-CARHARTT-BLK-RIPSTOP.html"><button>Buy now</button></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="/products/hoodie3.jpeg">
+                </td>
+                <td>
+                    <p>VINTAGE BLUE RUSSEL <br> BOXY HOODIE</p>
+                </td>
+                <td>
+                    <p id="prdct2-price">PHP 1,000</p>
+                </td>
+                <td>
+                    <a href="/HTML/Payment-VINTAGE-BLUE-RUSSEL-BOXY-HOODIE.html"><button>Buy now</button></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="/products/tops2.jpg">
+                </td>
+                <td>
+                    <p>H&M BLACK <br> LINEN POLO</p>
+                </td>
+                <td>
+                    <p id="prdct3-price">PHP 800</p>
+                </td>
+                <td>
+                    <a href="/HTML/Payment-H&M-BLACK-LINEN-POLO.html"><button>Buy now</button></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="/products/short3.jpg">
+                </td>
+                <td>
+                    <p>DICKIES <br> LIGHT WASH JORTS</p>
+                </td>
+                <td>
+                    <p id="prdct3-price">PHP 1,000</p>
+                </td>
+                <td>
+                    <a href="/HTML/Payment-DICKIES-LIGHT-WASHED-JORTS.html"><button>Buy now</button></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="/products/tops3.jpg">
+                </td>
+                <td>
+                    <p>DARK GRAY RUSSEL ATHLETIC <br> BOXY CREWNECK</p>
+                </td>
+                <td>
+                    <p id="prdct3-price">PHP 800</p>
+                </td>
+                <td>
+                    <a href="/HTML/Payment-DARK-GRAY-RUSSEL-ATHLETIC-BOXY-CREWNECK.html"><button>Buy now</button></a>
+                </td>
+            </tr>
+        </table>
+          
+    </div>
+
+    <script>
+        function openPopup() {
+            var popup = document.getElementById('popup-shoppingcart');
+            popup.classList.add('active');
+        }
+
+        function closePopup() {
+            var popup = document.getElementById('popup-shoppingcart');
+            popup.classList.remove('active');   
+        }
+    </script>
+
+    <section class="content">
+        <div class="item">
+            <img src="/products/short3.jpg" style="width: 400px;height: 500px;">
+        </div>
+        
+        <div class="productdesc">
+            <h1>DICKIES LIGHT WASHED JORTS</h1>
+            <h2>PHP 1,000</h2>
+            <hr style="border-width: 1px;">
+            <h3>SIZE</h3>
+            <table border="">
+                <tr>
+                    <th rowspan="2">LARGE</th>
+                    <th>WIDTH</th>
+                    <th>LENGTH</th>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>26</td>
+                </tr>
+            </table>
+            <h4>In stock, ready to ship</h4>
+            <a href="/HTML/Payment-DICKIES-LIGHT-WASHED-JORTS.html"><button>ADD TO CART</button></a>
+            <h5>CONDITION</h5>
+            <ul>
+                <li>Well used</li>
+                <li>Near excellent used condition (perfect fade)</li>
+            </ul>
+        </div>
+
+
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section-1">
+                <p>Sign Up to receive early exclusive access to products and discounts</p>
+
+                <form class="signup-form">
+                    <input type="email" id="email" name="email" required placeholder="Email">
+        
+                    <button type="submit">Subscribe</button>
+                </form>
+
+            </div>
+
+            <div class="footer-section-2">
+                <a href="#" class="logo-footer">onsite.cal</a>
+                <p>Experience the complete fashion circle with onsite.cal! <br />
+                     Sell your pre-loved pieces at a guaranteed price,and then<br />
+                      explore our curated collection to shop these unique finds.<br />
+                       With onsite.cal, your wardrobe is not just a revolving door<br />
+                        it's a dynamic marketplace where every item has a story,<br />
+                         waiting to be told and worn again<br />
+                </p>
+            </div>
+
+            <div class="footer-section-3">
+                <i class="ri-instagram-fill"></i>
+                <i class="ri-facebook-fill"></i>
+                <p id="customer">Customer Care</p>
+                <p id="shipping">Shipping Policy</p>
+                <p id="pickup">Pickup Policy</p>
+                <p id="help">Help Center</p>
+                <p id="terms">Terms of Service</p>
+            </div>
+            
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 onsite.cal. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>
